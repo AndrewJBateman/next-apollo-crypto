@@ -1,23 +1,23 @@
-import App from 'next/app'
-import { ApolloProvider } from '@apollo/react-hooks'
+import App from 'next/app';
+import { ApolloProvider } from '@apollo/react-hooks';
 import Container from '@material-ui/core/Container';
 import withData from '../utils/apollo-client';
 import Layout from '../components/_App/Layout';
 
 class MyApp extends App {
-  render() {
-    const { Component, apollo } = this.props
+	render() {
+		const { Component, apollo } = this.props;
 
-    return (
-      <ApolloProvider client={apollo}>
-        <Layout>
-          <Container>
-            <Component />
-          </Container>
-        </Layout>
-      </ApolloProvider>
-    )
-  }
+		return (
+			<ApolloProvider client={apollo}>
+				<Layout>
+					<Container>
+						<Component />
+					</Container>
+				</Layout>
+			</ApolloProvider>
+		);
+	}
 }
 
-export default withData(MyApp)
+export default withData(MyApp);
