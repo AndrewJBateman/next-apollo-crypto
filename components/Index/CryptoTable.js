@@ -1,18 +1,20 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Table from "@material-ui/core/Table";
-import TableBody from "@material-ui/core/TableBody";
-import TableCell from "@material-ui/core/TableCell";
-import TableContainer from "@material-ui/core/TableContainer";
-import TableHead from "@material-ui/core/TableHead";
-import TableRow from "@material-ui/core/TableRow";
-import Paper from "@material-ui/core/Paper";
-import Avatar from "@material-ui/core/Avatar";
-import { formatCurrency } from "../../utils/filters";
+import React from 'react';
+
+import { makeStyles } from '@material-ui/core/styles';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+import Avatar from '@material-ui/core/Avatar';
+
+import { formatCurrency } from '../../utils/filters';
 
 const useStyles = makeStyles({
 	table: {
-		minWidth: 650,
+		minWidth: 550,
 	},
 });
 
@@ -26,11 +28,11 @@ const CryptoTable = ({ cryptos }) => {
 					<caption>A table of crypto currency prices</caption>
 					<TableHead>
 						<TableRow>
-							<TableCell>#</TableCell>
-							<TableCell align="right">Name</TableCell>
-							<TableCell align="right">Symbol</TableCell>
+							<TableCell>Rank</TableCell>
+              <TableCell>Logo</TableCell>
+							<TableCell align="left">Name</TableCell>
+							<TableCell align="left">Symbol</TableCell>
 							<TableCell align="right">Price</TableCell>
-							<TableCell align="right">Market Cap.</TableCell>
 						</TableRow>
 					</TableHead>
 					<TableBody>
@@ -39,15 +41,16 @@ const CryptoTable = ({ cryptos }) => {
 								<TableCell component="th" scope="row">
 									{row.rank}
 								</TableCell>
-								<TableCell align="right">
-									<Avatar alt="image of crypto" src={row.logo_url} />
+                <TableCell>
+									<Avatar alt="image of crypto" src={row.logo_url} className={classes.small} />
+								</TableCell>
+								<TableCell align="left">
 									{row.name}
 								</TableCell>
-								<TableCell align="right">{row.currency}</TableCell>
-								<TableCell align="right">{formatCurrency(row.price)}</TableCell>
-								<TableCell align="right">
-									{formatCurrency(row.market_cap)}
+                <TableCell align="left">
+                  {row.currency}
 								</TableCell>
+								<TableCell align="right">{formatCurrency(row.price)}</TableCell>
 							</TableRow>
 						))}
 					</TableBody>
