@@ -17,8 +17,8 @@ const Layout = ({ children }) => {
       <Head>
         <title>Crypto Price Table</title>
       </Head>
-      <Navigation />
       <Container text style={styles.container}>
+      <Navigation />
         {children}
       </Container>
     </>
