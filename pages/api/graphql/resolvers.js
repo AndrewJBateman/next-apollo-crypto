@@ -1,3 +1,5 @@
+// fetch and return data
+
 import Nomics from 'nomics'
 
 const nomics = new Nomics({
@@ -18,7 +20,6 @@ const resolvers = {
         ids: [`${cryptoid}`.toUpperCase()],
         interval: [`${interval}`]
       })
-
       return fetchCryptoDetails[0][`${interval}`]
     }
   }

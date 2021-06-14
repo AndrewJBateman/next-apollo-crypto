@@ -10,9 +10,6 @@ export const GET_CRYPTOS = gql`
       rank
       price
       price_date
-      market_cap
-      circulating_supply
-      max_supply
     }
   }
 `

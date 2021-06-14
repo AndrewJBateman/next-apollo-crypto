@@ -1,3 +1,5 @@
+// define structure of data and queries
+
 import { gql } from 'apollo-server-micro'
 
 const typeDefs = gql`
@@ -9,9 +11,6 @@ const typeDefs = gql`
     rank: String!
     price: String!
     price_date: String!
-    market_cap: String
-    circulating_supply: String
-    max_supply: String
   }
   type CryptoDetails {
     volume: String!
