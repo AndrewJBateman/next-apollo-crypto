@@ -17,7 +17,7 @@ const Index = () => {
 			<Divider />
 			{error ? <p>error fetching crypto data</p> : null}
 			{loading ? (
-				<LinearProgress color="secondary" />
+				<LinearProgress color="primary" />
 			) : (
 				<CryptoTable cryptos={data.getCryptos} />
 			)}
