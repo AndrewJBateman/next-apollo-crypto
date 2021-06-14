@@ -29,7 +29,7 @@
 
 ## :camera: Screenshots
 
-![Example screenshot](./img/data.png).
+![Example screenshot](./img/graphql.png).
 
 ## :signal_strength: Technologies
 
@@ -37,6 +37,9 @@
 * [React v17](https://reactjs.org/) Javascript library.
 * [GraphQL v15](https://github.com/graphql/graphql-js)
 * [GraphQL Tag v2](https://www.npmjs.com/package/graphql-tag) utilities for parsing GraphQL queries
+* [Apollo v2](https://www.apollographql.com/) GraphQL implementation data graph layer
+* [Apollo Client v2](https://www.npmjs.com/package/apollo-client) fully-featured caching GraphQL client
+* [Apollo Server Micro v2](https://www.npmjs.com/package/apollo-server-micro) Micro integration for the Apollo community GraphQL Server.
 * [Next v10](https://nextjs.org/) minimalist framework for rendering react apps on the server.
 * [Next with Apollo v5](https://www.npmjs.com/package/next-with-apollo)
 * [Material-UI v4](https://www.npmjs.com/package/@material-ui/core) React components to save dev. time
