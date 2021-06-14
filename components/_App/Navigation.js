@@ -20,8 +20,8 @@ const Navigation = () => {
 					</Button>
 					<Menu {...bindMenu(popupState)}>
 						<Container>
-							<Link href="">
-								<MenuItem onClick={popupState.close}>Crypto List</MenuItem>
+							<Link href="/">
+								<MenuItem onClick={popupState.close}>Cryptocurrency List</MenuItem>
 							</Link>
 						</Container>
 					</Menu>
